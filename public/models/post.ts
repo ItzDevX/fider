@@ -26,9 +26,7 @@ export class PostStatus {
   ) {}
 
   public static Open = new PostStatus("Open", "open", false, false, false);
-  public static Planned = new PostStatus("Planned", "planned", true, false, true);
-  public static Started = new PostStatus("Started", "started", true, false, true);
-  public static Completed = new PostStatus("Completed", "completed", true, true, true);
+  public static Completed = new PostStatus("Accepted", "completed", true, true, true);
   public static Declined = new PostStatus("Declined", "declined", true, true, true);
   public static Duplicate = new PostStatus("Duplicate", "duplicate", true, true, false);
   public static Deleted = new PostStatus("Deleted", "deleted", false, true, false);
@@ -44,11 +42,9 @@ export class PostStatus {
 
   public static All = [
     PostStatus.Open,
-    PostStatus.Planned,
-    PostStatus.Started,
-    PostStatus.Completed,
+    PostStatus.Accepted,
+    PostStatus.Declined,
     PostStatus.Duplicate,
-    PostStatus.Declined
   ];
 }
 
