@@ -8,14 +8,14 @@ export const FiderVersion = () => {
     <p className="info center hidden-sm hidden-md">
       {!fider.isBillingEnabled() && (
         <>
-          Support our{" "}
-          <a target="_blank" href="http://opencollective.com/fider">
-            OpenCollective
+          Support us{" "}
+          <a target="_blank" href="https://discord.gg/DNeq72e">
+            Synergy
           </a>
           <br />
         </>
       )}
-      Fider v{fider.settings.version}
+      Bbakery Applications v{fider.settings.version}
     </p>
   );
 };
