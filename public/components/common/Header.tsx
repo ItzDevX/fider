@@ -35,10 +35,10 @@ export const Header = () => {
         <FaUser /> <span>{fider.session.user.name}</span>
       </div>
       <a href="/settings" className="c-menu-user-item">
-        Settings
+        My Settings
       </a>
       <a href="/notifications" className="c-menu-user-item">
-        Notifications
+        My Notifications
         {unreadNotifications > 0 && <div className="c-unread-count">{unreadNotifications}</div>}
       </a>
       <div className="c-menu-user-divider" />
@@ -47,7 +47,7 @@ export const Header = () => {
           <FaCog /> <span>Administration</span>
         </div>,
         <a key={2} href="/admin" className="c-menu-user-item">
-          Site Settings
+          Server Settings
         </a>,
         <div key={5} className="c-menu-user-divider" />
       ]}
