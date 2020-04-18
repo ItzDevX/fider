@@ -23,9 +23,9 @@ interface UserListItemProps {
 }
 
 const UserListItem = (props: UserListItemProps) => {
-  const admin = props.user.role === UserRole.Administrator && <span className="staff">administrator</span>;
-  const collaborator = props.user.role === UserRole.Collaborator && <span className="staff">collaborator</span>;
-  const blocked = props.user.status === UserStatus.Blocked && <span className="blocked">blocked</span>;
+  const admin = props.user.role === UserRole.Administrator && <span className="staff">Adminstrators</span>;
+  const collaborator = props.user.role === UserRole.Collaborator && <span className="staff">Collaborator</span>;
+  const blocked = props.user.status === UserStatus.Blocked && <span className="blocked">Blocked</span>;
   const isVisitor = props.user.role === UserRole.Visitor;
 
   const renderEllipsis = () => {
@@ -188,7 +188,7 @@ export default class ManageMembersPage extends AdminBasePage<ManageMembersPagePr
         </p>
         <ul className="l-legend info">
           <li>
-            <strong>&middot; Administrators</strong>have full access to edit and manage content, permissions and all
+            <strong>&middot; Administrators</strong> have full access to edit and manage content, permissions and all
             site settings{Fider.isBillingEnabled ? ", including billing." : "."}
           </li>
           <li>
