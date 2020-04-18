@@ -28,12 +28,13 @@ const Lonely = () => {
         permanentCloseKey="at-least-3-posts"
         condition={fider.session.isAuthenticated && fider.session.user.isAdministrator}
       >
-        Welcome to our new application system! It's recommended to follow our <strong>guidelines & rules<strong> on this system
+        It's recommended that you wait <strong>at least 3</strong> hours before sharing this site.
+        initial content is key to start the interactions with your audience.
       </Hint>
       <p>
         <FaRegLightbulb />
       </p>
-      <p>No new applications ;c</p>
+      <p>No new applications :c</p>
     </div>
   );
 };
