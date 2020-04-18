@@ -28,13 +28,12 @@ const Lonely = () => {
         permanentCloseKey="at-least-3-posts"
         condition={fider.session.isAuthenticated && fider.session.user.isAdministrator}
       >
-        It's recommended that you post <strong>at least 3</strong> suggestions here before sharing this site. The
-        initial content is key to start the interactions with your audience.
+        Welcome to our new application system! It's recommended to follow our <strong>guidelines & rules<strong> on this system
       </Hint>
       <p>
         <FaRegLightbulb />
       </p>
-      <p>It's lonely out here. Start by sharing a suggestion!</p>
+      <p>No new applications ;c</p>
     </div>
   );
 };
@@ -70,7 +69,7 @@ const HomePage = (props: HomePageProps) => {
             style="full"
           />
           <PostInput
-            placeholder={fider.session.tenant.invitation || "Enter your suggestion here..."}
+            placeholder={fider.session.tenant.invitation || "Enter your custom application here..."}
             onTitleChanged={setTitle}
           />
         </div>
