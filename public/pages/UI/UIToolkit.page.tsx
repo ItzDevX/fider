@@ -334,19 +334,13 @@ const UIToolkitPage = () => {
           <ShowPostStatus status={PostStatus.Open} />
         </ListItem>
         <ListItem>
-          <ShowPostStatus status={PostStatus.Planned} />
-        </ListItem>
-        <ListItem>
-          <ShowPostStatus status={PostStatus.Started} />
-        </ListItem>
-        <ListItem>
-          <ShowPostStatus status={PostStatus.Duplicate} />
-        </ListItem>
-        <ListItem>
-          <ShowPostStatus status={PostStatus.Completed} />
+          <ShowPostStatus status={PostStatus.Accepted} />
         </ListItem>
         <ListItem>
           <ShowPostStatus status={PostStatus.Declined} />
+        </ListItem>
+        <ListItem>
+          <ShowPostStatus status={PostStatus.Duplicate} />
         </ListItem>
       </List>
 
