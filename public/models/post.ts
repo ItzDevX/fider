@@ -26,7 +26,7 @@ export class PostStatus {
   ) {}
 
   public static Open = new PostStatus("Open", "open", false, false, false);
-  public static Completed = new PostStatus("Accepted", "completed", true, true, true);
+  public static Accepted = new PostStatus("Accepted", "accepted", true, true, true);
   public static Declined = new PostStatus("Declined", "declined", true, true, true);
   public static Duplicate = new PostStatus("Duplicate", "duplicate", true, true, false);
   public static Deleted = new PostStatus("Deleted", "deleted", false, true, false);
