@@ -45,9 +45,9 @@ func getViewData(view string) (string, []enum.PostStatus, string) {
 	case "started":
 		sort = "response_date"
 		statuses = []enum.PostStatus{enum.PostStarted}
-	case "completed":
+	case "accepted":
 		sort = "response_date"
-		statuses = []enum.PostStatus{enum.PostCompleted}
+		statuses = []enum.PostStatus{enum.PostAccepted}
 	case "declined":
 		sort = "response_date"
 		statuses = []enum.PostStatus{enum.PostDeclined}
@@ -57,7 +57,7 @@ func getViewData(view string) (string, []enum.PostStatus, string) {
 			enum.PostOpen,
 			enum.PostStarted,
 			enum.PostPlanned,
-			enum.PostCompleted,
+			enum.PostAccepted,
 			enum.PostDeclined,
 		}
 	case "trending":
