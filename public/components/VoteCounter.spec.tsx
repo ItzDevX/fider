@@ -52,7 +52,7 @@ describe("<VoteCounter />", () => {
   });
 
   test("when post is closed", () => {
-    post.status = PostStatus.Completed.value;
+    post.status = PostStatus.Accepted.value;
     const wrapper = shallow(<VoteCounter post={post} />);
     const button = wrapper.find("button");
     expect(button.text()).toBe("<FaCaretUp />5");
