@@ -9,7 +9,7 @@ var (
 	//PostStarted is used when the post has been accepted and work is in progress
 	PostStarted PostStatus = 1
 	//PostCompleted is used when the post has been accepted and already implemented
-	PostCompleted PostStatus = 2
+	PostAccepted PostStatus = 2
 	//PostDeclined is used when organizers decide to decline an post
 	PostDeclined PostStatus = 3
 	//PostPlanned is used when organizers have accepted an post and it's on the roadmap
@@ -22,7 +22,7 @@ var (
 var postStatusIDs = map[PostStatus]string{
 	PostOpen:      "open",
 	PostStarted:   "started",
-	PostCompleted: "completed",
+	PostAccepted: "accepted",
 	PostDeclined:  "declined",
 	PostPlanned:   "planned",
 	PostDuplicate: "duplicate",
@@ -32,7 +32,7 @@ var postStatusIDs = map[PostStatus]string{
 var postStatusNames = map[string]PostStatus{
 	"open":      PostOpen,
 	"started":   PostStarted,
-	"completed": PostCompleted,
+	"accepted": PostAccepted,
 	"declined":  PostDeclined,
 	"planned":   PostPlanned,
 	"duplicate": PostDuplicate,
