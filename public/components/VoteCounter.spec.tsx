@@ -14,7 +14,7 @@ beforeEach(() => {
     title: "Add TypeScript",
     description: "",
     createdAt: "",
-    status: PostStatus.Started.value,
+    status: PostStatus.Open.value,
     user: {
       id: 5,
       name: "John",
