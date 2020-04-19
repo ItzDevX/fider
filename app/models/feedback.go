@@ -39,7 +39,7 @@ type Vote struct {
 
 // CanBeVoted returns true if this post can have its vote changed
 func (i *Post) CanBeVoted() bool {
-	return i.Status != enum.PostCompleted && i.Status != enum.PostDeclined && i.Status != enum.PostDuplicate
+	return i.Status != enum.PostAccepted && i.Status != enum.PostDeclined && i.Status != enum.PostDuplicate
 }
 
 // NewPost represents a new post
