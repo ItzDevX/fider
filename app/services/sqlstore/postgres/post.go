@@ -390,7 +390,7 @@ func searchPosts(ctx context.Context, q *query.SearchPosts) error {
 				enum.PostOpen,
 				enum.PostStarted,
 				enum.PostPlanned,
-				enum.PostCompleted,
+				enum.PostAccepted,
 				enum.PostDeclined,
 			}), ToTSQuery(q.Query), q.Query)
 		} else {
