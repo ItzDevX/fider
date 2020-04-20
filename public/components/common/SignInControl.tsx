@@ -2,7 +2,7 @@ import "./SignInControl.scss";
 
 import React, { useState } from "react";
 import { SocialSignInButton, Form, Button, Input, Message } from "@fider/components";
-import { device, isCookieEnabled } from "@fider/services";
+import { device, actions, Failure, isCookieEnabled } from "@fider/services";
 import { useFider } from "@fider/hooks";
 
 interface SignInControlProps {
@@ -13,8 +13,21 @@ interface SignInControlProps {
 
 export const SignInControl: React.FunctionComponent<SignInControlProps> = props => {
   const fider = useFider();
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState<Failure | undefined>(undefined);
 
-
+  const signIn = async () => {
+    const result = await actions.signIn(email);
+    if (result.ok) {
+      setEmail("");
+      setError(undefined);
+      if (props.onEmailSent) {
+        props.onEmailSent(email);
+      }
+    } else if (result.error) {
+      setError(result.error);
+    }
+  };
 
   const providersLen = fider.settings.oauth.length;
 
@@ -45,11 +58,16 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = props 
               </React.Fragment>
             ))}
           </div>
-          <p className="info">Our secure application web system by Nev_ermind & Zuehx</p>
+          <p className="info">Connect to our secure server with discord or something els.</p>
         </div>
       )}
 
-      {providersLen > 0 && <div className="c-divider">Created by Nev_ermind</div>}
+      {providersLen > 0 && <div className="c-divider">By Nev_ermind</div>}
+
+            />
+          </Form>
+        </div>
+      )}
     </div>
   );
 };
