@@ -68,6 +68,15 @@ const HomePage = (props: HomePageProps) => {
   return (
     <div id="p-home" className="page container">
       <div className="row">
+        <div className="l-posts-col col-md-8">
+          {isLonely() ? (
+            <Lonely />
+          ) : title ? (
+            <SimilarPosts title={title} tags={props.tags} />
+          ) : (
+            <PostsContainer posts={props.posts} tags={props.tags} countPerStatus={props.countPerStatus} />
+          )}
+        </div>
         <div className="l-welcome-col col-md-4">
           <MultiLineText
             className="welcome-message"
@@ -78,15 +87,6 @@ const HomePage = (props: HomePageProps) => {
             placeholder={fider.session.tenant.invitation || "Enter your custom application here..."}
             onTitleChanged={setTitle}
           />
-        </div>
-        <div className="l-posts-col col-md-8">
-          {isLonely() ? (
-            <Lonely />
-          ) : title ? (
-            <SimilarPosts title={title} tags={props.tags} />
-          ) : (
-            <PostsContainer posts={props.posts} tags={props.tags} countPerStatus={props.countPerStatus} />
-          )}
         </div>
       </div>
     </div>
