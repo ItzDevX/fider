@@ -16,7 +16,7 @@ const messages = {
   private: () => (
     <>
       <p className="welcome">
-        <strong>{Fider.session.tenant.name}</strong> is a private space and requires an invitation to join it.
+        <strong>{Fider.session.tenant.name}</strong> is private system application web system.
       </p>
       <p>If you have an account or an invitation, you may use following options to sign in.</p>
     </>
