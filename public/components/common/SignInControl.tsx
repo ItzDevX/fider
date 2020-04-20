@@ -2,7 +2,7 @@ import "./SignInControl.scss";
 
 import React, { useState } from "react";
 import { SocialSignInButton, Form, Button, Input, Message } from "@fider/components";
-import { device, actions, isCookieEnabled } from "@fider/services";
+import { device, isCookieEnabled } from "@fider/services";
 import { useFider } from "@fider/hooks";
 
 interface SignInControlProps {
