@@ -83,10 +83,6 @@ const HomePage = (props: HomePageProps) => {
             text={fider.session.tenant.welcomeMessage || defaultWelcomeMessage}
             style="full"
           />
-          <PostInput
-            placeholder={fider.session.tenant.invitation || "Enter your custom application here..."}
-            onTitleChanged={setTitle}
-          />
         </div>
       </div>
     </div>
