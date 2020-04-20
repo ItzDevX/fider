@@ -69,17 +69,17 @@ const HomePage = (props: HomePageProps) => {
   return (
     <div id="p-home" className="page container">
       <div className="row">
-       div className="l-welcome-col col-md-4">
+       <div className="l-welcome-col col-md-4">
           <MultiLineText
             className="welcome-message"
-            text={fider.session.tenant.welcomeMessage || defaultWelcomeMessage}
+            text={defaultWelcomeMessage}
             style="full"
           />
         </div>
-       <div className="l-welcome-col col-md-4">
+        <div className="l-welcome-col col-md-4">
           <MultiLineText
-            className="update-message"
-            text=`Our API & Webserver are currently being updated. Report any bugs in our community server`
+            className="welcome-message"
+            text=`Our API & Webserver are currently being updated. Sorry for the inconvenience!`
             style="full"
           />
         </div>
