@@ -5,7 +5,6 @@ import { Post, Tag, PostStatus } from "@fider/models";
 import { MultiLineText, Hint } from "@fider/components";
 import { SimilarPosts } from "./components/SimilarPosts";
 import { FaRegLightbulb } from "react-icons/fa";
-import { PostInput } from "./components/PostInput";
 import { PostsContainer } from "./components/PostsContainer";
 import { useFider } from "@fider/hooks";
 
@@ -34,7 +33,7 @@ const Lonely = () => {
       <p>
         <FaRegLightbulb />
       </p>
-      <p>It's lonely out here. Start by sharing a suggestion!</p>
+      <p>No new applications ;c</p>
     </div>
   );
 };
@@ -43,8 +42,7 @@ const defaultWelcomeMessage = `We'd love to hear what you're thinking about.
 What can we do better? This is the place for you to vote, discuss and share ideas.`;
 
 const HomePage = (props: HomePageProps) => {
-  const fider = useFider();
-  const [title, setTitle] = useState("");
+  const [title] = useState("");
 
   const isLonely = () => {
     const len = Object.keys(props.countPerStatus).length;
@@ -68,10 +66,7 @@ const HomePage = (props: HomePageProps) => {
             text={fider.session.tenant.welcomeMessage || defaultWelcomeMessage}
             style="full"
           />
-          <PostInput
-            placeholder={fider.session.tenant.invitation || "Enter your suggestion here..."}
-            onTitleChanged={setTitle}
-          />
+      
         </div>
         <div className="l-posts-col col-md-8">
           {isLonely() ? (
