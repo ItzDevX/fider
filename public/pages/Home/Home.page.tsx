@@ -51,7 +51,7 @@ Our server & API are getting a update.
 
 const HomePage = (props: HomePageProps) => {
   const fider = useFider();
-  const [title, setTitle] = useState("");
+  const [title] = useState("");
 
   const isLonely = () => {
     const len = Object.keys(props.countPerStatus).length;
