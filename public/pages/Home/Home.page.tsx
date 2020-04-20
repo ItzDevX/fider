@@ -49,7 +49,6 @@ will be listed. Enjoy reading! Found a bug or a problem? Contact **@Nev_ermind**
 Our server & API are getting a update.
 `;
 
-const updatemessage = `Our API & Webserver are currently being updated. Sorry for the inconvenience!`;
 
 const HomePage = (props: HomePageProps) => {
   const [title] = useState("");
@@ -76,14 +75,6 @@ const HomePage = (props: HomePageProps) => {
             text={defaultWelcomeMessage}
             style="full"
           />
-        </div>
-        <div className="l-welcome-col col-md-4">
-          <MultiLineText
-            className="update-message"
-            text={updatemessage}
-            style="full"
-          />
-        </div>
         <div className="l-posts-col col-md-8">
           {isLonely() ? (
             <Lonely />
