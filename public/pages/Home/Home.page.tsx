@@ -69,6 +69,20 @@ const HomePage = (props: HomePageProps) => {
   return (
     <div id="p-home" className="page container">
       <div className="row">
+       div className="l-welcome-col col-md-4">
+          <MultiLineText
+            className="welcome-message"
+            text={fider.session.tenant.welcomeMessage || defaultWelcomeMessage}
+            style="full"
+          />
+        </div>
+       <div className="l-welcome-col col-md-4">
+          <MultiLineText
+            className="update-message"
+            text=`Our API & Webserver are currently being updated. Report any bugs in our community server`
+            style="full"
+          />
+        </div>
         <div className="l-posts-col col-md-8">
           {isLonely() ? (
             <Lonely />
@@ -77,13 +91,6 @@ const HomePage = (props: HomePageProps) => {
           ) : (
             <PostsContainer posts={props.posts} tags={props.tags} countPerStatus={props.countPerStatus} />
           )}
-        </div>
-        <div className="l-welcome-col col-md-4">
-          <MultiLineText
-            className="welcome-message"
-            text={fider.session.tenant.welcomeMessage || defaultWelcomeMessage}
-            style="full"
-          />
         </div>
       </div>
     </div>
