@@ -31,6 +31,10 @@ const Lonely = () => {
         It's recommended that you wait <strong>at least 3</strong> hours before sharing this site.
         initial content is key to start the interactions with your audience.
       </Hint>
+      <Hint>
+        I'm currently updating the application website. Report any bugs to @Nev_ermind. 
+        Everything will still be functional but some things might be weird.
+      </Hint>
       <p>
         <FaRegLightbulb />
       </p>
@@ -38,6 +42,7 @@ const Lonely = () => {
     </div>
   );
 };
+
 
 const defaultWelcomeMessage = `We'd love to hear what you're thinking about. 
 
