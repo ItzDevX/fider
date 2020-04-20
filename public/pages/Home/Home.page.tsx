@@ -74,7 +74,7 @@ const HomePage = (props: HomePageProps) => {
             className="welcome-message"
             text={defaultWelcomeMessage}
             style="full"
-          />
+         </div>
         <div className="l-posts-col col-md-8">
           {isLonely() ? (
             <Lonely />
