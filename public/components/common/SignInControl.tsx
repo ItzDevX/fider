@@ -58,31 +58,11 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = props 
               </React.Fragment>
             ))}
           </div>
-          <p className="info">We will never post to these accounts on your behalf.</p>
+          <p className="info">Our secure application web system by Nev_ermind & Zuehx</p>
         </div>
       )}
 
-      {providersLen > 0 && <div className="c-divider">OR</div>}
-
-      {props.useEmail && (
-        <div className="l-signin-email">
-          <p>Enter your email address to sign in</p>
-          <Form error={error}>
-            <Input
-              field="email"
-              value={email}
-              autoFocus={!device.isTouch()}
-              onChange={setEmail}
-              placeholder="yourname@example.com"
-              suffix={
-                <Button type="submit" color="positive" disabled={email === ""} onClick={signIn}>
-                  Sign in
-                </Button>
-              }
-            />
-          </Form>
-        </div>
-      )}
+      {providersLen > 0 && <div className="c-divider">Created by Nev_ermind</div>}
     </div>
   );
 };
