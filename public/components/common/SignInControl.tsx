@@ -16,18 +16,7 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = props 
   const [email, setEmail] = useState("");
   const [error, setError] = useState<Failure | undefined>(undefined);
 
-  const signIn = async () => {
-    const result = await actions.signIn(email);
-    if (result.ok) {
-      setEmail("");
-      setError(undefined);
-      if (props.onEmailSent) {
-        props.onEmailSent(email);
-      }
-    } else if (result.error) {
-      setError(result.error);
-    }
-  };
+
 
   const providersLen = fider.settings.oauth.length;
 
