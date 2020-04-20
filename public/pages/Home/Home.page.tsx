@@ -5,7 +5,6 @@ import { Post, Tag, PostStatus } from "@fider/models";
 import { MultiLineText, Hint } from "@fider/components";
 import { SimilarPosts } from "./components/SimilarPosts";
 import { FaRegLightbulb } from "react-icons/fa";
-import { PostInput } from "./components/PostInput";
 import { PostsContainer } from "./components/PostsContainer";
 import { useFider } from "@fider/hooks";
 
@@ -44,9 +43,11 @@ const Lonely = () => {
 };
 
 
-const defaultWelcomeMessage = `We'd love to hear what you're thinking about. 
+const defaultWelcomeMessage = `Welcome to **BristoBakery Application** web interface. Here all applications from the application centre 
+will be listed. Enjoy reading! Found a bug or a problem? Contact **@Nev_ermind**
 
-What can we do better? This is the place for you to vote, discuss and share ideas.`;
+Our server & API are getting a update.
+`;
 
 const HomePage = (props: HomePageProps) => {
   const fider = useFider();
