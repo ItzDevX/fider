@@ -70,7 +70,7 @@ export const Header = () => {
           </a>
           {showRightMenu && (
             <div onClick={showModal} className="c-menu-item-signin">
-              {fider.session.isAuthenticated && <Avatar user={fider.session.user} />}
+              {fider.session.isAuthenticated && <Avatar user={fider.session.user}/>{fider.session.user.name} }
               {unreadNotifications > 0 && <div className="c-unread-dot" />}
               {!fider.session.isAuthenticated && <span>Sign in</span>}
               {fider.session.isAuthenticated && <FaCaretDown />}
