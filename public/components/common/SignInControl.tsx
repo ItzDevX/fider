@@ -64,10 +64,8 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = props 
 
       {providersLen > 0 && <div className="c-divider">By Nev_ermind</div>}
 
-            />
-          </Form>
-        </div>
-      )}
+
+
     </div>
   );
 };
