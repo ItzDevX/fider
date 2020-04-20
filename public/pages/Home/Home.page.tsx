@@ -49,6 +49,8 @@ will be listed. Enjoy reading! Found a bug or a problem? Contact **@Nev_ermind**
 Our server & API are getting a update.
 `;
 
+const updatemessage = `Our API & Webserver are currently being updated. Sorry for the inconvenience!`;
+
 const HomePage = (props: HomePageProps) => {
   const fider = useFider();
   const [title] = useState("");
@@ -78,8 +80,8 @@ const HomePage = (props: HomePageProps) => {
         </div>
         <div className="l-welcome-col col-md-4">
           <MultiLineText
-            className="welcome-message"
-            text=`Our API & Webserver are currently being updated. Sorry for the inconvenience!`
+            className="update-message"
+            text={updatemessage}
             style="full"
           />
         </div>
