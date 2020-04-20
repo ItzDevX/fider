@@ -52,7 +52,6 @@ Our server & API are getting a update.
 const updatemessage = `Our API & Webserver are currently being updated. Sorry for the inconvenience!`;
 
 const HomePage = (props: HomePageProps) => {
-  const fider = useFider();
   const [title] = useState("");
 
   const isLonely = () => {
