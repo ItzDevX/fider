@@ -60,33 +60,7 @@ export const ModerationPanel = (props: ModerationPanelProps) => {
     </Modal.Window>
   );
 
-  const modal2 = (
-    <Modal.Window isOpen={showConfirmation} onClose={hideModal} center={false} size="large">
-      <Modal.Content>
-        <Form error={error}>
-          <TextArea
-            field="text"
-            onChange={setText}
-            value={text}
-            placeholder="Why do you want to ban this user? (required)"
-          >
-            <span className="info">
-              This operation <strong>cannot</strong> be undone.
-            </span>
-          </TextArea>
-        </Form>
-      </Modal.Content>
-
-      <Modal.Footer>
-        <Button color="danger" onClick={handleDelete}>
-          Ban user
-        </Button>
-        <Button color="cancel" onClick={hideModal}>
-          Cancel
-        </Button>
-      </Modal.Footer>
-    </Modal.Window>
-  );
+ 
 
   return (
     <>
