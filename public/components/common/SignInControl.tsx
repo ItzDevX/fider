@@ -65,7 +65,15 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = props 
       {providersLen > 0 && <div className="c-divider">By Nev_ermind</div>}
 
 
+      {props.useEmail && (
+        <div className="l-signin-email">
+          <p>Enter your email address to sign in</p>
+          <Form error={error}>
 
+            />
+          </Form>
+        </div>
+      )}
     </div>
   );
 };
