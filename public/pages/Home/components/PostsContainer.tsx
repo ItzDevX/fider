@@ -137,7 +137,7 @@ export class PostsContainer extends React.Component<PostsContainerProps, PostsCo
         {this.state.loading && <Loader />}
         {showMoreLink && (
           <a href={showMoreLink} className="c-post-list-show-more" onTouchEnd={this.showMore} onClick={this.showMore}>
-            View more posts
+            View more applications
           </a>
         )}
       </>
