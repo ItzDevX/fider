@@ -75,7 +75,7 @@ export const TagsPanel = (props: TagsPanelProps) => {
   return (
     <>
       <span className={subtitleClasses} onClick={onSubtitleClick}>
-        Tags {icon}
+        Application tags {icon}
       </span>
 
       {!isEditing && tagsList}
