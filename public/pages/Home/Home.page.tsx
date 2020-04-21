@@ -5,7 +5,6 @@ import { Post, Tag, PostStatus } from "@fider/models";
 import { MultiLineText, Hint } from "@fider/components";
 import { SimilarPosts } from "./components/SimilarPosts";
 import { FaRegLightbulb } from "react-icons/fa";
-import { PostInput } from "./components/PostInput";
 import { PostsContainer } from "./components/PostsContainer";
 import { useFider } from "@fider/hooks";
 
