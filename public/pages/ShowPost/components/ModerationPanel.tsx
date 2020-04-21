@@ -61,7 +61,7 @@ export const ModerationPanel = (props: ModerationPanelProps) => {
   );
 
   const modal2 = (
-    <Modal.Window isOpen={showConfirmation} onClose={hideModal2} center={false} size="large">
+    <Modal.Window isOpen={showConfirmation} onClose={hideModal} center={false} size="large">
       <Modal.Content>
         <Form error={error}>
           <TextArea
@@ -81,7 +81,7 @@ export const ModerationPanel = (props: ModerationPanelProps) => {
         <Button color="danger" onClick={handleDelete}>
           Ban user
         </Button>
-        <Button color="cancel" onClick={hideModal2}>
+        <Button color="cancel" onClick={hideModal}>
           Cancel
         </Button>
       </Modal.Footer>
