@@ -67,7 +67,7 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
   public render() {
     const button = (
       <Button className="respond" fluid={true} onClick={this.showModal}>
-        <FaBullhorn /> Respond
+        <FaBullhorn /> Change Status
       </Button>
     );
 
@@ -101,7 +101,7 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
                 onChange={this.setText}
                 value={this.state.text}
                 minRows={5}
-                placeholder="What's going on with this post? Let your users know what are your plans..."
+                placeholder="What's going on with this application? Tell us why! (optional)"
               />
             )}
           </Form>
@@ -109,7 +109,7 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
 
         <Modal.Footer>
           <Button color="positive" onClick={this.submit}>
-            Submit
+            Change status
           </Button>
           <Button color="cancel" onClick={this.closeModal}>
             Cancel
