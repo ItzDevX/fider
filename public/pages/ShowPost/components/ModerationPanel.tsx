@@ -40,7 +40,7 @@ export const ModerationPanel = (props: ModerationPanelProps) => {
             field="text"
             onChange={setText}
             value={text}
-            placeholder="Why are you deleting this post? (optional)"
+            placeholder="Why are you deleting this application? (optional)"
           >
             <span className="info">
               This operation <strong>cannot</strong> be undone.
@@ -51,9 +51,37 @@ export const ModerationPanel = (props: ModerationPanelProps) => {
 
       <Modal.Footer>
         <Button color="danger" onClick={handleDelete}>
-          Delete
+          Delete application
         </Button>
         <Button color="cancel" onClick={hideModal}>
+          Cancel
+        </Button>
+      </Modal.Footer>
+    </Modal.Window>
+  );
+
+  const modal2 = (
+    <Modal.Window isOpen={showConfirmation} onClose={hideModal2} center={false} size="large">
+      <Modal.Content>
+        <Form error={error}>
+          <TextArea
+            field="text"
+            onChange={setText}
+            value={text}
+            placeholder="Why do you want to ban this user? (required)"
+          >
+            <span className="info">
+              This operation <strong>cannot</strong> be undone.
+            </span>
+          </TextArea>
+        </Form>
+      </Modal.Content>
+
+      <Modal.Footer>
+        <Button color="danger" onClick={handleDelete}>
+          Ban user
+        </Button>
+        <Button color="cancel" onClick={hideModal2}>
           Cancel
         </Button>
       </Modal.Footer>
@@ -63,11 +91,14 @@ export const ModerationPanel = (props: ModerationPanelProps) => {
   return (
     <>
       {modal}
-      <span className="subtitle">Moderation</span>
+      <span className="subtitle">Application Moderation</span>
       <List>
         <ListItem>
           <Button color="danger" size="tiny" fluid={true} onClick={showModal}>
-            Delete
+            Delete application
+          </Button>
+          <Button color="danger" size="tiny" fluid={true} onClick={showModal}>
+            Ban User
           </Button>
         </ListItem>
       </List>
